@@ -1,0 +1,47 @@
+ul.lista {
+  display: flex;
+}
+
+ul.lista li:last-child {
+  background-color: rgb(0, 0, 255);
+}
+
+ul.lista li:nth-child(odd) {
+  text-decoration: underline green;
+}
+
+ul.lista li {
+  padding-left: 10px;
+}
+
+ul.lista li:nth-child(1)::after {
+  content: "\1F600";
+}
+
+ul.lista li:nth-child(2)::after {
+  content: "\1F601";
+}
+
+ul.lista li:nth-child(3)::after {
+  content: "\1F602";
+}
+
+ul.lista li:nth-child(4)::after {
+  content: "\1F606";
+}
+
+ul.lista li:nth-child(5)::after {
+  content: "\1F604";
+}
+
+ul.lista li:nth-child(6)::after {
+  content: "\1F605";
+}
+
+ul.lista [lang="en"] {
+  font-size: 32px;
+}
+
+ul#provincias :not(li:nth-of-type(2)) {
+  list-style-type: upper-roman;
+}
