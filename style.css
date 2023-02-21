@@ -1,19 +1,20 @@
-ul.lista {
-  display: flex;
-}
-
+/* El último li con fondo azul usando valores RGB */
 ul.lista li:last-child {
   background-color: rgb(0, 0, 255);
 }
 
+/* li impares con texto subrayado de color verde */
 ul.lista li:nth-child(odd) {
   text-decoration: underline green;
 }
 
+/* Muestra todos los elementos de la lsta en una sola línea con una separación de 10px */
 ul.lista li {
+  display: inline-block;
   padding-left: 10px;
 }
 
+/* Al final de cada li aparecerá un emoji diferente sin modificar el html */
 ul.lista li:nth-child(1)::after {
   content: "\1F600";
 }
@@ -38,10 +39,13 @@ ul.lista li:nth-child(6)::after {
   content: "\1F605";
 }
 
+/* El li con texto en inglés aparece con el doble de tamaño que los otros y en mayúscula */
 ul.lista [lang="en"] {
-  font-size: 32px;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
+/* En lugar de tener los puntos a la izquierda de los elementos aparecerán números romanos excepto en "A Coruña" */
 ul#provincias :not(li:nth-of-type(2)) {
   list-style-type: upper-roman;
 }
